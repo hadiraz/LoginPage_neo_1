@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;900&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>Login</title>
+</head>
+<body>
+    <main>
+        <section class="card-sec">
+            <div class="login-card">
+                <div class="header-card">
+                <img class="header-card-img" src="../eduford_img/user2.jpg"> 
+                <h2>Developed By Hadi.Rz</h2>
+                <p>web developer</p>
+                </div>
+                <div class="body-card">
+                    <p id="alert-msg">* please fill the fields</p>
+                    <span class="input-img fal fa-user"></span>
+                    <input class="user-name input-neo" placeholder="username">
+                    <span class="input-img fal fa-lock"></span>
+                    <input class="password input-neo" type="password" placeholder="password">
+                    <span class="submit-btn" onclick="check_fields()">Login</span>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+<script>
+    function check_fields(){
+        var user_name=document.getElementsByClassName("user-name").text;
+        var password=document.getElementsByClassName("password").text;
+        var alert_box=document.getElementById("alert-msg");
+        
+        if(user_name==null || password==null){
+            alert_box.style.display = "block";
+        }
+    }
+</script>
+</html>
